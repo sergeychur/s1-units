@@ -25,11 +25,9 @@ const months = {
 
 export function getDate(timestamp) {
 	const date = new Date(timestamp);
-
 	const day = date.getDate();
 	const week = date.getDay();
 	const month = date.getMonth();
 	const year = date.getFullYear();
-
 	return `${day} ${months[month]}, ${weeks[week]}, ${year} год`;
 }

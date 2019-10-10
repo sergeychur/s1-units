@@ -14,7 +14,7 @@ export const sortTypes = {
  */
 export const sortOrders = (orders, sortType) => {
 	if (!orders || !orders.length || !sortType) {
-		return;
+		return false;
 	}
 
 	switch(sortType) {
@@ -28,6 +28,7 @@ export const sortOrders = (orders, sortType) => {
 			orders.sort(sortByItemNames);
 			break;
 	}
+	return true;
 };
 
 /**
